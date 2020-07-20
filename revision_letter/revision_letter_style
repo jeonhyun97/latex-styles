@@ -1,0 +1,53 @@
+
+%% Main format
+%%%% layout
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=15mm,
+ right=15mm,
+ top=15mm,
+ bottom=20mm
+}
+%%%% no indentation
+\setlength\parindent{0pt}
+
+
+%% Font (Sans Serif)
+\renewcommand{\familydefault}{\sfdefault}
+
+%% Title design
+\makeatletter
+\renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
+\begin{flushleft}
+  \Large{
+    \textbf{\@title}
+  }
+  
+  \normalsize{
+    \@author
+  }
+  \par\noindent\rule{\textwidth}{0.6pt}
+\end{flushleft}\egroup
+}
+\makeatother
+
+%% Adding line number
+\usepackage{lineno, color}
+\linenumbers
+\renewcommand\linenumberfont{\normalfont\small\sffamily\color{blue}}
+
+%% Review question / answer format
+\usepackage[dvipsnames]{xcolor}
+\newcommand{\RQ}[2]{{\large{\textcolor{red}{\textbf{R{#1}\_Q{#2: }}}}}}
+\newcommand{\RA}[2]{{\large{\textcolor{MidnightBlue}{\textbf{R{#1}\_A{#2: }}}}}}
+
+
+%% Box for referencing my own work
+\newcommand{\mybox}[2]{
+    \vspace*{4mm}
+    \fbox{\parbox{\textwidth}
+        {#1}
+    }
+}
