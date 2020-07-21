@@ -40,8 +40,8 @@
 
 %% Review question / answer format
 \usepackage[dvipsnames]{xcolor}
-\newcommand{\RQ}[2]{{\large{\textcolor{red}{\textbf{R{#1}\_Q{#2: }}}}}}
-\newcommand{\RA}[2]{{\large{\textcolor{MidnightBlue}{\textbf{R{#1}\_A{#2: }}}}}}
+\newcommand{\Q}[3]{{\normalsize{\textcolor{red}{\textbf{{#1}{#2}\_Q{#3: }}}}}}
+\newcommand{\A}[3]{{\normalsize{\textcolor{MidnightBlue}{\textbf{{#1}{#2}\_A{#3: }}}}}}
 
 
 %% Box for referencing my own work
