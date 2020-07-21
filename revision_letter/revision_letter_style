@@ -13,7 +13,6 @@
 %%%% no indentation
 \setlength\parindent{0pt}
 
-
 %% Font (Sans Serif)
 \renewcommand{\familydefault}{\sfdefault}
 
@@ -40,8 +39,16 @@
 
 %% Review question / answer format
 \usepackage[dvipsnames]{xcolor}
-\newcommand{\Q}[3]{{\normalsize{\textcolor{red}{\textbf{{#1}{#2}\_Q{#3: }}}}}}
-\newcommand{\A}[3]{{\normalsize{\textcolor{MidnightBlue}{\textbf{{#1}{#2}\_A{#3: }}}}}}
+\newcommand{\Q}[3]{
+    {\normalsize{\textcolor{red}{\textbf{{#1}\_Q{#2: }}}}}
+    {#3} \\
+    
+}
+\newcommand{\A}[3]{
+    {\normalsize{\textcolor{MidnightBlue}{\textbf{{#1}\_A{#2: }}}}}
+    {#3} \\
+    
+}
 
 
 %% Box for referencing my own work
