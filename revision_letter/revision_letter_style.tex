@@ -41,7 +41,7 @@
 \usepackage[dvipsnames]{xcolor}
 \newcommand{\Q}[3]{
     {\normalsize{\textcolor{red}{\textbf{{#1}\_Q{#2: }}}}}
-    {#3} \\
+    {#3} \\~
     
 }
 \newcommand{\A}[3]{
@@ -57,4 +57,14 @@
     \fbox{\parbox{\textwidth}
         {#1}
     }
+}
+
+%% Text colorbox 
+\usepackage{soul}
+
+\newcommand{\cb}[1]{
+    \begingroup
+        \definecolor{hlcolor}{RGB}{232,209,82}\sethlcolor{hlcolor}%
+        \hl{#1}%
+    \endgroup
 }
